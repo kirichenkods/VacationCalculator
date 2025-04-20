@@ -17,9 +17,6 @@ public class Holidays {
     @Column(name = "id", nullable = false)
     private Long id;
 
-//    @Column(name = "date", nullable = false)
-//    private LocalDate date;
-
     @Column(name = "day", nullable = false)
     private int day;
 
