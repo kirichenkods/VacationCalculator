@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="insert-holiday-dates-1" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 1 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-2" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 2 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="2"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-3" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 3 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="3"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-4" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 4 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="4"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-5" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 5 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="5"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-6" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 6 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="6"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-7" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 7 AND month = 1;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="7"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-8" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 8 AND month = 1;
+            </sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="1"/>
+            <column name="day" value="8"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-9" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 23 AND month = 2;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="2"/>
+            <column name="day" value="23"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-10" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 8 AND month = 3;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="3"/>
+            <column name="day" value="8"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-11" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 1 AND month = 5;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="5"/>
+            <column name="day" value="1"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-12" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 9 AND month = 5;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="5"/>
+            <column name="day" value="9"/>
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-13" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 12 AND month = 6;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="6"/>
+            <column name="day" value="12"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-holiday-dates-14" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(1)
+                                         FROM holidays
+                                         WHERE day = 4 AND month = 11;</sqlCheck>
+        </preConditions>
+
+        <insert schemaName="public" tableName="holidays">
+            <column name="month" value="11"/>
+            <column name="day" value="4"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

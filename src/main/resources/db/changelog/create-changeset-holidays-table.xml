@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create_table_holidays" author="kirichenkods">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists schemaName="public" tableName="holidays"/>
+            </not>
+        </preConditions>
+
+        <comment>Создание таблицы с праздничными днями</comment>
+        <createTable schemaName="public" tableName="holidays">
+            <column name="id" type="SERIAL4" remarks="поле id">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="month" type="INT" remarks="номер месяца">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="day" type="INT" remarks="день месяца">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="create_constraint_month_day" author="kirichenkods">
+        <preConditions>
+            <not>
+                <indexExists indexName="unique_constraint"/>
+            </not>
+        </preConditions>
+
+        <comment>связка день + месяц должна быть уникальна</comment>
+        <addUniqueConstraint schemaName="public"
+                             tableName="holidays"
+                             columnNames="month, day"
+                             constraintName="unique_constraint"/>
+    </changeSet>
+</databaseChangeLog>
