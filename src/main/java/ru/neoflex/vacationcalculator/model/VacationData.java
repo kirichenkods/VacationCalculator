@@ -1,14 +1,11 @@
 package ru.neoflex.vacationcalculator.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Getter
 @Setter
-@ToString
 public class VacationData {
     private double averageSalary;
     private int vacationDays;
